@@ -3,10 +3,8 @@
   <div class="field is-centered has-text-centered">
     <label class="label">Qual sua área de preferência para buscar academias?</label>
     <div class="control">
-      <div class="select" ng-click="selectedGym=!selectedGym">
-        <select>
-          <option>Zona Sul</option>
-          <option>Zona Norte</option>
+      <div class="select">
+        <select ng-options="local as local.label for local in locais track by local.id" ng-model="zona" ng-change="$storage.dede=zona">
         </select>
       </div>
     </div>
@@ -23,7 +21,7 @@
 
   <div class="field is-grouped has-addons-centered has-addons" ng-show="selectedGym">
     <div class="control">
-      <button class="button is-danger">Continuar</button>
+      <button class="button is-danger" ui-sref="objetivo">Continuar</button>
     </div>
     <div class="control">
       <button class="button is-light">Voltar</button>

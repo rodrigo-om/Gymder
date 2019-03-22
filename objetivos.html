@@ -1,12 +1,25 @@
-    <div class="has-text-centered" ng-show="!started">
-      <h1 class="title">
-        Bem vindo ao Gymder!
-      </h1>
-      <p class="subtitle">
-        Vamos te ajudar a escolher a melhor combinação fitness pra você
-      </p>
-      <p class="subtitle">
-        Vamos começar?
-      </p>
-      <a class="button is-light" ui-sref="local" ng-click="started=true">Vamos!</a>
+<div class="columns">
+  <div class="column">
+  <div class="field is-centered has-text-centered">
+    <label class="label">Qual seu objetivo principal?</label>
+    <div class="control">
+      <div class="select" ng-click="selectedGoal=!selectedGoal">
+        <select>
+          <option>Perder peso</option>
+          <option>Ganhar massa muscular</option>
+          <option>Treinamento funcional</option>
+        </select>
+      </div>
     </div>
+  </div>
+
+  <div class="field is-grouped has-addons-centered has-addons" ng-show="selectedGoal">
+    <div class="control">
+      <button class="button is-danger" ui-sref="equipamento">Continuar</button>
+    </div>
+    <div class="control">
+      <button class="button is-light">Voltar</button>
+    </div>
+  </div>
+</div>
+</div>
