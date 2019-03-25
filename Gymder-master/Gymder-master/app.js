@@ -12,27 +12,16 @@
 			id: 2,
 			label: 'Zona Norte'
 		}];
-		$scope.objetivos = [{
-			id: 1,
-			label: 'Perder Peso'
-		}, {
-			id: 2,
-			label: 'Ganhar massa muscular'
-		}, {
-			id: 3,
-			label: 'Treinamento funcional'
-		}];
-
-		$scope.exercicios = [ 
-		{"id":1, "name":"esteira"},
-		{"id":2, "name":"supino"},
-		{"id":3, "name":"bola"}
-		]
-
-		$scope.exerciciosDoLocal = {
-			"casa": {"exercicios":[1,2,3]},
-			"false": {"exercicios":[2]}
-		}
+      $scope.objetivos = [{
+         id: 1,
+         label: 'Perder Peso'
+      }, {
+         id: 2,
+         label: 'Ganhar massa muscular'
+      }, {
+         id: 3,
+         label: 'Treinamento funcional'
+      }];
 
 		$scope.coverClicked = function ($index) {
 			$scope.playlistSelected = $scope.selectedPlaylistIndex != $index
@@ -40,20 +29,6 @@
 			? $scope.selectedPlaylistIndex = $index 
 			: $scope.selectedPlaylistIndex = 4;
 		};
-
-		$scope.objetivoEscolhido = function (objetivo) {
-			$scope.$storage.objetivo=objetivo
-			$scope.selectedGoal='true'
-		};
-
-		$scope.filtrarExercicios = function () {
-			return $scope.exercicios.filter(isEven)
-		};
-
-		function isEven(value) {
-			return $scope.exerciciosDoLocal[$localStorage.local].exercicios.includes(value.id)
-			
-		}
 	}])
 	.config(($stateProvider, $urlRouterProvider) => {
 		$urlRouterProvider.otherwise('/');

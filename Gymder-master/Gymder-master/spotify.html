@@ -1,0 +1,36 @@
+<div class="columns">
+  <div class="column">
+    <div class="field is-centered has-text-centered">
+      <label class="label">Que tal uma música para acompanhar? Temos playlists do Spotify pra você!</label>
+      <div class="control">
+        <div class="field is-grouped has-addons-centered has-addons">
+          <div class="control">
+            <button class="button is-danger" ng-click="choosePlaylist=!choosePlaylist">Escolher playlist</button>
+          </div>
+          <div class="control">
+           <button class="button is-light" ui-sref="final">Não gosto de música</button>
+         </div>
+       </div>
+       <div class="field is-grouped has-addons-centered has-addons">
+        <div class="control">
+          <button class="button is-light" ui-sref="{{$storage.localpage}}">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="field is-grouped has-addons-centered has-addons" ng-show="choosePlaylist">
+    <div class="column" ng-repeat="plcover in playlists"> 
+      <figure class="image is-square">
+        <img src="./img/{{plcover}}" ng-click="coverClicked($index) ; $storage.playlist=$index" ng-class="{ 'is-rounded': $index == selectedPlaylistIndex }"></img>
+      </figure>
+    </div>
+  </div>
+  <div class="field is-centered  has-text-centered" ng-show="playlistSelected">
+    <div class="field is-grouped has-addons-centered has-addons">
+        <div class="control">
+          <button class="button is-danger" ui-sref="resultado">Confirmar</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>

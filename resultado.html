@@ -1,22 +1,13 @@
 <div class="columns">
   <div class="column">
     <div class="field is-centered has-text-centered">
-      <label class="label">Você quer fazer exercícios em casa, certo? Prefere exercícios com ou sem equipamentos?</label>
-      <div class="control">
-        <div class="field is-grouped has-addons-centered has-addons">
-          <div class="control">
-            <button class="button is-danger" ui-sref="spotify">Com equipamentos</button>
-          </div>
-          <div class="control">
-           <button class="button is-light" ui-sref="spotify">Sem equipamentos</button>
-         </div>
-       </div>
-       <div class="field is-grouped has-addons-centered has-addons">
-        <div class="control">
-          <button class="button is-light" ui-sref="academia">Voltar</button>
+      <label class="label">Seus resultados</label>
+      <div ng-init="entities = filtrarExercicios()">
+        <div ng-repeat="entity in entities">
+          <h1 class="label">{{entity.name}}</label>
         </div>
-     </div>
-   </div>
- </div>
-</div>
+      </div>
+
+    </div>
+  </div>
 </div>

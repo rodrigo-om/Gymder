@@ -13,7 +13,7 @@
        </div>
        <div class="field is-grouped has-addons-centered has-addons">
         <div class="control">
-          <button class="button is-light" ui-sref="academia">Voltar</button>
+          <button class="button is-light" ui-sref="{{$storage.localpage}}">Voltar</button>
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@
   <div class="field is-grouped has-addons-centered has-addons" ng-show="choosePlaylist">
     <div class="column" ng-repeat="plcover in playlists"> 
       <figure class="image is-square">
-        <img src="./{{plcover}}" ng-click="coverClicked($index) ; $storage.playlist=$index" ng-class="{ 'is-rounded': $index == selectedPlaylistIndex }"></img>
+        <img src="./img/{{plcover}}" ng-click="coverClicked($index) ; $storage.playlist=$index" ng-class="{ 'is-rounded': $index == selectedPlaylistIndex }"></img>
       </figure>
     </div>
   </div>

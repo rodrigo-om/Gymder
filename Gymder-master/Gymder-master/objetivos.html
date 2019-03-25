@@ -4,7 +4,7 @@
     <label class="label">Qual seu objetivo principal?</label>
     <div class="control">
       <div class="select">
-        <select ng-options="objetivo as objetivo.label for objetivo in objetivos track by objetivo.id" ng-model="objetivo" ng-change="objetivoEscolhido(objetivo)">
+        <select ng-options="objetivo as objetivo.label for objetivo in objetivos track by objetivo.id" ng-model="objetivo" ng-change="$storage.objetivo=objetivo ; selectedGoal='true'">
            <option value="" disabled selected>Escolha seu objetivo</option>
         </select>
       </div>
