@@ -2,12 +2,17 @@
   <div class="column">
     <div class="field is-centered has-text-centered">
       <label class="label">Seus resultados</label>
-      <div ng-init="entities = filtrarExercicios()">
-        <div ng-repeat="entity in entities">
-          <h1 class="label">{{entity.name}}</label>
+      <div ng-init="exercicios = filtrarExercicios()">
+        <div ng-repeat="exercicio in exercicios">
+          <h1>{{exercicio.name}}</h1>
         </div>
       </div>
-
+      <div ng-show="$storage.local=='casa' && $storage.equipamentos=='true'" ng-init="equipamentos = filtrarEquipamentos()">
+        casa
+      </div>
+      <div ng-show="$storage.local=='academia'" ng-init="academias = filtrarAcademias()">
+        academia
+      </div>
     </div>
   </div>
 </div>
