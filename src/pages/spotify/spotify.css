@@ -1,0 +1,21 @@
+
+.musics > .column {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.musics > .column:not(.selected):hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition-duration: 1s;
+}
+
+.musics > .column > .image {
+    flex-basis: 100%;
+}
+
+.selected-music {
+    width: 5%;
+    position: absolute;
+    z-index: 1;
+}

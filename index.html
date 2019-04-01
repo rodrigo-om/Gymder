@@ -12,6 +12,13 @@
   <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
   <script type="text/javascript" src='https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js'></script>
   <script src="app.js"></script>
+  <script src="src/config/routes.js"></script>
+  <script src="src/pages/local/local.controller.js"></script>
+  <script src="src/pages/spotify/spotify.controller.js"></script>
+  <script src="src/pages/objetivo/objetivo.controller.js"></script>
+  <script src="src/pages/academia/academia.controller.js"></script>
+  <script src="src/pages/resultado/resultado.controller.js"></script>
+  <script src="src/pages/equipamentos/equipamentos.controller.js"></script>
 </head>
 <body style="display: flex;min-height: 100vh;flex-direction: column;" ng-app="myApp" >
   <section class="nav-section">
@@ -23,7 +30,7 @@
       </div>
     </nav>
   </section>
-  <section class="section" ng-controller="UserCtrl" style="height: 80vh">
+  <section class="section" style="height: 80vh">
     <div ui-view class="container"></div>
   </section>
 </body>

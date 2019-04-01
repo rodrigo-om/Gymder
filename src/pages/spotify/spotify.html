@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="src/pages/spotify/spotify.css">
+<div class="columns" ng-controller="SpotifyController as spotifyCtrl">
+  <div class="column">
+    <div class="field is-centered has-text-centered">
+      <label class="label">Que tal uma música para acompanhar? Temos playlists do Spotify pra você!</label>
+      <div class="control">
+        <div class="field is-grouped has-addons-centered has-addons">
+          <div class="control">
+            <button class="button is-danger" ng-click="spotifyCtrl.choosePlaylist=!spotifyCtrl.choosePlaylist">Escolher playlist</button>
+          </div>
+          <div class="control">
+           <button class="button is-light" ui-sref="resultado">Não gosto de música</button>
+         </div>
+       </div>
+       <div class="field is-grouped has-addons-centered has-addons">
+        <div class="control">
+          <button class="button is-light" ui-sref="{{spotifyCtrl.routeBack}}">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="musics field is-grouped has-addons-centered has-addons" ng-if="spotifyCtrl.choosePlaylist">
+    <div ng-class="{ 'selected': $index == spotifyCtrl.selectedPlaylistIndex }" class="column" ng-repeat="plcover in spotifyCtrl.playlists">
+      <img class="selected-music" ng-if="$index == spotifyCtrl.selectedPlaylistIndex" ng-src="./img/success.png">
+      <figure class="image is-square">
+        <img ng-src="./img/{{plcover}}" 
+        ng-click="spotifyCtrl.coverClicked($index)" 
+        ng-class="{ 'is-rounded': $index == spotifyCtrl.selectedPlaylistIndex }"/>
+      </figure>
+    </div>
+  </div>
+  <div class="field is-centered  has-text-centered" ng-if="spotifyCtrl.playlistSelected">
+    <div class="field is-grouped has-addons-centered has-addons">
+        <div class="control">
+          <button class="button is-danger" ui-sref="resultado">Confirmar</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>

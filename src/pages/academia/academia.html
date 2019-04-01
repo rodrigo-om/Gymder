@@ -1,10 +1,13 @@
-<div class="columns">
+<div class="columns" ng-controller="AcademiaController as academiaCtrl">
   <div class="column">
     <div class="field is-centered has-text-centered">
       <label class="label">Qual sua área de preferência para buscar academias?</label>
       <div class="control">
         <div class="select">
-          <select ng-options="local as local.label for local in locais track by local.id" ng-model="zona" ng-change="$storage.zonaAcademia=zona ; selectedGym='true'">
+          <select ng-options="local as local.label for local in academiaCtrl.locais track by local.id" 
+          ng-model="zona" 
+          ng-change="academiaCtrl.localEscolhido(zona)">
+          <option value="" disabled selected>Escolha seu local de academia</option>
           </select>
         </div>
       </div>
@@ -13,14 +16,14 @@
     <div class="field has-addons-centered has-addons">
       <div class="control">
         <label class="checkbox">
-          <input type="checkbox" ng-click="selectedGym=$event.target.checked ; $storage.zonaAcademia='false'">
+          <input type="checkbox" ng-click="academiaCtrl.jaTenhoAcademia($event)">
           Já tenho uma academia
         </label>
       </div>
     </div>
 
     <div class="field is-grouped has-addons-centered has-addons">
-      <div class="control" ng-show="selectedGym">
+      <div class="control" ng-if="academiaCtrl.selectedGym">
         <button class="button is-danger" ui-sref="spotify">Continuar</button>
       </div>
       <div class="control">

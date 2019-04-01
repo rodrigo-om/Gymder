@@ -1,14 +1,14 @@
-<div class="columns">
+<div class="columns" ng-controller="LocalController as localCtrl">
   <div class="column">
     <div class="field is-centered has-text-centered">
       <label class="label">Você prefere fazer exercícios em casa ou ir para uma academia?</label>
       <div class="control">
         <div class="field is-grouped has-addons-centered has-addons">
           <div class="control">
-            <button class="button is-danger" ng-click="$storage.local='academia' ; $storage.localpage='academia'" ui-sref="academia">Academia</button>
+            <button class="button is-danger" ng-click="localCtrl.localEscolhido('academia')" ui-sref="academia">Academia</button>
           </div>
           <div class="control">
-            <button class="button is-danger" ng-click="$storage.local='casa' ; $storage.localpage='equipamento'" ui-sref="equipamento">Casa</button>
+            <button class="button is-danger" ng-click="localCtrl.localEscolhido('casa','equipamento')" ui-sref="equipamento">Casa</button>
           </div>
         </div>
         <div class="field is-grouped has-addons-centered has-addons">

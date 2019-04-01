@@ -1,0 +1,26 @@
+<div class="columns" ng-controller="ObjetivoController as objetivosCtrl">
+  <div class="column">
+    <div class="field is-centered has-text-centered">
+      <label class="label">Qual seu objetivo principal?</label>
+      <!-- <label class="label">{{objetivosCtrl.texto}}</label> -->
+      <div class="control">
+        <div class="select">
+          <select ng-options="objetivo as objetivo.label for objetivo in objetivosCtrl.objetivos track by objetivo.id" 
+          ng-model="objetivo" 
+          ng-change="objetivosCtrl.objetivoEscolhido(objetivo)">
+            <option value="" disabled selected>Escolha seu objetivo</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-grouped has-addons-centered has-addons">
+      <div class="control" ng-if="objetivosCtrl.selectedGoal">
+        <button class="button is-danger" ui-sref="local">Continuar</button>
+      </div>
+      <div class="control">
+        <button class="button is-light" ui-sref="home">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="columns" ng-controller="ResultadoController as resultCtrl">
+  <div class="column">
+    <div class="field is-centered has-text-centered">
+      <label class="label">Seus resultados</label>
+      <div>
+        <div ng-repeat="exercicio in resultCtrl.exercicios">
+          <h1>{{exercicio.name}}</h1>
+        </div>
+      </div>
+      <div ng-if="resultCtrl.local=='casa' && resultCtrl.equipamentos">
+        casa
+      </div>
+      <div ng-if="resultCtrl.local=='academia'">
+        academia
+      </div>
+    </div>
+  </div>
+</div>

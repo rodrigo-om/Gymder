@@ -18,14 +18,14 @@
       </div>
     </div>
   </div>
-  <div class="field is-grouped has-addons-centered has-addons" ng-show="choosePlaylist">
+  <div class="field is-grouped has-addons-centered has-addons" ng-if="choosePlaylist">
     <div class="column" ng-repeat="plcover in playlists"> 
       <figure class="image is-square">
         <img src="./img/{{plcover}}" ng-click="coverClicked($index) ; $storage.playlist=$index" ng-class="{ 'is-rounded': $index == selectedPlaylistIndex }"></img>
       </figure>
     </div>
   </div>
-  <div class="field is-centered  has-text-centered" ng-show="playlistSelected">
+  <div class="field is-centered  has-text-centered" ng-if="playlistSelected">
     <div class="field is-grouped has-addons-centered has-addons">
         <div class="control">
           <button class="button is-danger" ui-sref="resultado">Confirmar</button>
