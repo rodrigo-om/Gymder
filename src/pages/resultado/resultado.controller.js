@@ -82,21 +82,66 @@
 
 		vm.listaEquipamentos = [{
 			"id": 1,
-			"name": "bla",
+			"name": "Corda",
+			"image": "https://http2.mlstatic.com/corda-escalada-vertical-sisal-4-metros-48-mm-D_NQ_NP_713021-MLB25640861225_062017-F.jpg",
+			"link":"https://produto.mercadolivre.com.br/MLB-686647429-corda-escalada-vertical-sisal-4-metros-48-mm-_JM",
+			"loja":"mercado livre",
 			"objetivos": [
 				1
 			]
 		}, {
 			"id": 2,
-			"name": "blabla",
+			"name": "Corda",
+			"image": "https://http2.mlstatic.com/corda-escalada-vertical-sisal-4-metros-48-mm-D_NQ_NP_713021-MLB25640861225_062017-F.jpg",
+			"link":"https://produto.mercadolivre.com.br/MLB-686647429-corda-escalada-vertical-sisal-4-metros-48-mm-_JM",
+			"loja":"mercado livre",
 			"objetivos": [
-				2
+				1
 			]
 		}, {
 			"id": 3,
-			"name": "blablabla",
+			"name": "Corda",
+			"image": "https://http2.mlstatic.com/corda-escalada-vertical-sisal-4-metros-48-mm-D_NQ_NP_713021-MLB25640861225_062017-F.jpg",
+			"link":"https://produto.mercadolivre.com.br/MLB-686647429-corda-escalada-vertical-sisal-4-metros-48-mm-_JM",
+			"loja":"mercado livre",
 			"objetivos": [
-				3
+				1
+			]
+		}, {
+			"id": 3,
+			"name": "Corda",
+			"image": "https://http2.mlstatic.com/corda-escalada-vertical-sisal-4-metros-48-mm-D_NQ_NP_713021-MLB25640861225_062017-F.jpg",
+			"link":"https://produto.mercadolivre.com.br/MLB-686647429-corda-escalada-vertical-sisal-4-metros-48-mm-_JM",
+			"loja":"mercado livre",
+			"objetivos": [
+				1
+			]
+		}, {
+			"id": 3,
+			"name": "Corda",
+			"image": "https://http2.mlstatic.com/corda-escalada-vertical-sisal-4-metros-48-mm-D_NQ_NP_713021-MLB25640861225_062017-F.jpg",
+			"link":"https://produto.mercadolivre.com.br/MLB-686647429-corda-escalada-vertical-sisal-4-metros-48-mm-_JM",
+			"loja":"mercado livre",
+			"objetivos": [
+				1
+			]
+		}, {
+			"id": 3,
+			"name": "Corda",
+			"image": "https://http2.mlstatic.com/corda-escalada-vertical-sisal-4-metros-48-mm-D_NQ_NP_713021-MLB25640861225_062017-F.jpg",
+			"link":"https://produto.mercadolivre.com.br/MLB-686647429-corda-escalada-vertical-sisal-4-metros-48-mm-_JM",
+			"loja":"mercado livre",
+			"objetivos": [
+				1
+			]
+		}, {
+			"id": 3,
+			"name": "Corda",
+			"image": "https://http2.mlstatic.com/corda-escalada-vertical-sisal-4-metros-48-mm-D_NQ_NP_713021-MLB25640861225_062017-F.jpg",
+			"link":"https://produto.mercadolivre.com.br/MLB-686647429-corda-escalada-vertical-sisal-4-metros-48-mm-_JM",
+			"loja":"mercado livre",
+			"objetivos": [
+				1
 			]
 		}]
 

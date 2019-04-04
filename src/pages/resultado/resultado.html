@@ -1,10 +1,18 @@
+<link rel="stylesheet" href="src/pages/resultado/resultado.css">
 <div class="columns" ng-controller="ResultadoController as resultCtrl">
   <div class="column centered-select">
     <div class="field is-centered has-text-centered">
       <label class="label">Seus resultados</label>
-      <div ng-if="resultCtrl.local=='casa' && resultCtrl.equipamentos">
-        <div ng-repeat="equipamento in resultCtrl.equipamentos">
-          <h1>{{equipamento.name}}</h1>
+      Primeiramente, você vai precisar desses equipamentos para fazer os exercicios:
+      <div ng-if="resultCtrl.local=='casa' && resultCtrl.equipamentos" class="equipamentos">
+        <div ng-repeat="equipamento in resultCtrl.equipamentos" class="equipamentos">
+          <figure class="image equipamento">
+            <img ng-src="{{equipamento.image}}">
+            <div>
+              <figcaption ><a href="{{equipamento.link}}">{{equipamento.name}}</a></figcaption>
+              <p>R$1000,00</p>
+            </div>
+          </figure>
         </div>
       </div>
       <div ng-if="resultCtrl.local=='academia'">

@@ -1,0 +1,9 @@
+.equipamentos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.equipamento {
+    text-align: left;
+    margin: 0px 25px;
+}
