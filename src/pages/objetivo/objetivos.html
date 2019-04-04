@@ -1,9 +1,10 @@
+<link rel="stylesheet" href="src/pages/common/common.css">
 <div class="columns" ng-controller="ObjetivoController as objetivosCtrl">
   <div class="column">
     <div class="field is-centered has-text-centered">
       <label class="label">Qual seu objetivo principal?</label>
       <!-- <label class="label">{{objetivosCtrl.texto}}</label> -->
-      <div class="control">
+      <div class="control ">
         <div class="select">
           <select ng-options="objetivo as objetivo.label for objetivo in objetivosCtrl.objetivos track by objetivo.id" 
           ng-model="objetivo" 
