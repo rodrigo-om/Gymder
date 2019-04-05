@@ -17,6 +17,7 @@
 .selected-music {
     width: 5%;
     position: absolute;
+    transition: all linear 10s;
     z-index: 1;
 }
 

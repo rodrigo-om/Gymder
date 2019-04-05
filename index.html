@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/octoshrimpy/bulma-o-steps/master/bulma-steps.css"></link>
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -39,7 +40,7 @@
           <div class="navbar-item">
             <div class="control">
               <button ng-show="loginCtrl.isLogado==false" class="button is-danger is-outlined is-inverted" ng-click="console.log('registrou');login=true">Entrar</button>
-              <button ng-show="loginCtrl.isLogado==true" class="button is-danger is-outlined is-inverted" ng-click="console.log('registrou');logout=true">Bem vindo de volta {{loginCtrl.usuarioLogado}}!</button>
+              <button ng-show="loginCtrl.isLogado==true" class="button is-danger is-outlined is-inverted" ng-click="console.log('registrou');logout=true">Bem vindo de volta {{loginCtrl.usuarioLogado}}</button>
             </div>
           </div>
         </div>

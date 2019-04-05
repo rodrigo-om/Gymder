@@ -1,6 +1,37 @@
 <link rel="stylesheet" href="src/pages/resultado/resultado.css">
 <div class="columns" ng-controller="ResultadoController as resultCtrl">
   <div class="column centered-select">
+    <div class="steps-custom">
+      <ul class="steps is-small is-narrow is-centered is-hollow">
+        <li class="steps-segment">
+          <span class="steps-marker"></span>
+          <div class="steps-content is-divider-content">
+            <p class="is-size-6">Objetivo</p>
+          </div>
+        </li>
+        <li class="steps-segment">
+          <span class="steps-marker"></span>
+          <div class="steps-content is-divider-content">
+            <p class="is-size-6">Local</p>
+          </div>
+        </li>
+        <li class="steps-segment">
+          <span class="steps-marker"></span>
+          <div class="steps-content is-divider-content">
+            <p class="is-size-6">Spotify</p>
+          </div>
+        </li>
+        <li class="steps-segment">
+          <span class="steps-marker"></span>
+          <div class="steps-content is-divider-content">
+            <p class="is-size-6">Resultado</p>
+          </div>
+        </li>
+        <li class="steps-segment is-active">
+          <span class="steps-marker"></span>
+        </li>
+      </ul>
+    </div>
     <div class="field is-centered has-text-centered">
       <label class="label titulo-pagina">SEUS RESULTADOS</label>
       <div ng-if="resultCtrl.local=='casa' && resultCtrl.equipamentos">
@@ -35,7 +66,8 @@
               <figure class="image">
                 <img ng-src="{{academia.image}}" class="is-rounded image-academia">
                 <div>
-                  <figcaption class="title is-4 titulo-academia"><a href="{{academia.link}}">{{academia.name}}</a></figcaption>
+                  <figcaption class="title is-4 titulo-academia"><a href="{{academia.link}}">{{academia.name}}</a>
+                  </figcaption>
                 </div>
               </figure>
             </div>
@@ -96,7 +128,8 @@
       <div class="modal-card">
         <header class="modal-card-head">
           <p class="modal-card-title">Cadastrar</p>
-          <button class="delete" aria-label="close" ng-click="cadastrar=false;resultCtrl.cadastroSucesso=false"></button>
+          <button class="delete" aria-label="close"
+            ng-click="cadastrar=false;resultCtrl.cadastroSucesso=false"></button>
         </header>
         <section class="modal-card-body">
           <div class="field">

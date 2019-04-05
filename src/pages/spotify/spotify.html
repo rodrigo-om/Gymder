@@ -1,8 +1,40 @@
+<link rel="stylesheet" href="src/pages/common/common.css">
 <link rel="stylesheet" href="src/pages/spotify/spotify.css">
 <div class="columns" ng-controller="SpotifyController as spotifyCtrl">
   <div class="column">
+      <div class="steps-custom">
+          <ul class="steps is-small is-narrow is-centered is-hollow">
+              <li class="steps-segment">
+                <span class="steps-marker"></span>
+                <div class="steps-content is-divider-content">
+                  <p class="is-size-6">Objetivo</p>
+                </div>
+              </li>
+              <li class="steps-segment">
+                <span class="steps-marker"></span>
+                <div class="steps-content is-divider-content">
+                  <p class="is-size-6">Local</p>
+                </div>
+              </li>
+              <li class="steps-segment">
+                <span class="steps-marker"></span>
+                <div class="steps-content is-divider-content">
+                  <p class="is-size-6">Spotify</p>
+                </div>
+              </li>
+              <li class="steps-segment is-active">
+                <span class="steps-marker"></span>
+                <div class="steps-content is-divider-content">
+                  <p class="is-size-6">Resultado</p>
+                </div>
+              </li>
+              <li class="steps-segment">
+                <span class="steps-marker"></span>
+              </li>
+            </ul>
+          </div>
     <div class="field is-centered has-text-centered">
-      <label class="label">Que tal uma música para acompanhar? Temos playlists do Spotify pra você!</label>
+      <label class="label title is-3 titulo-pergunta">Que tal uma música para acompanhar? Temos playlists do Spotify pra você!</label>
       <div class="control">
         <div class="field is-grouped has-addons-centered has-addons">
           <div class="control">
@@ -21,7 +53,7 @@
   </div>
   <div class="musics field is-grouped has-addons-centered has-addons" ng-if="spotifyCtrl.choosePlaylist">
     <div ng-class="{ 'selected': $index == spotifyCtrl.selectedPlaylistIndex-1 }" class="column" ng-repeat="plcover in spotifyCtrl.playlists">
-      <img class="selected-music" ng-if="$index == spotifyCtrl.selectedPlaylistIndex-1" ng-src="./img/success.png">
+      <img class="selected-music sample-show-hide" ng-if="$index == spotifyCtrl.selectedPlaylistIndex-1" ng-src="./img/success.png">
       <figure class="image is-square pulse">
         <img ng-src="./img/{{plcover}}" 
         ng-click="spotifyCtrl.coverClicked($index)" 
