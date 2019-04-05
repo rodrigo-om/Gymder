@@ -20,12 +20,12 @@
     </div>
   </div>
   <div class="musics field is-grouped has-addons-centered has-addons" ng-if="spotifyCtrl.choosePlaylist">
-    <div ng-class="{ 'selected': $index == spotifyCtrl.selectedPlaylistIndex }" class="column" ng-repeat="plcover in spotifyCtrl.playlists">
-      <img class="selected-music" ng-if="$index == spotifyCtrl.selectedPlaylistIndex" ng-src="./img/success.png">
+    <div ng-class="{ 'selected': $index == spotifyCtrl.selectedPlaylistIndex-1 }" class="column" ng-repeat="plcover in spotifyCtrl.playlists">
+      <img class="selected-music" ng-if="$index == spotifyCtrl.selectedPlaylistIndex-1" ng-src="./img/success.png">
       <figure class="image is-square pulse">
         <img ng-src="./img/{{plcover}}" 
         ng-click="spotifyCtrl.coverClicked($index)" 
-        ng-class="{ 'is-rounded': $index == spotifyCtrl.selectedPlaylistIndex }"/>
+        class="is-rounded"/>
       </figure>
     </div>
   </div>

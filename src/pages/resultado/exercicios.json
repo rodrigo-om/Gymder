@@ -1,0 +1,145 @@
+[{
+    "id": 2,
+    "name": "Supino Reto",
+    "locais": [
+        "academia"
+    ],
+    "objetivos": [
+        2
+    ],
+    "cadencia":"4 sets de 11",
+    "image":"https://anilhasfitness.com.br/wp-content/uploads/supino-reto-anilhas-1170x650.jpg"
+}, {
+    "id": 7,
+    "name": "Rosca Alternada com Halteres",
+    "locais": [
+        "academia"
+    ],
+    "objetivos": [
+        2
+    ],
+    "cadencia":"4 sets de 8",
+    "image":"http://www.treinofeminino.com/wp-content/uploads/2014/04/Rosca-direta-alternado.jpg"
+}, {
+    "id": 8,
+    "name": "Extensão de Tríceps",
+    "locais": [
+        "academia"
+    ],
+    "objetivos": [
+        2
+    ],
+    "cadencia":"4 sets de 12",
+    "image":"https://emagrecerefitness.com/wp-content/uploads/2018/03/Treino-de-tr%C3%ADceps-capa-696x510.jpg"
+}, {
+    "id": 9,
+    "name": "Flexão no solo",
+    "locais": [
+        "academia",
+        "casa"
+    ],
+    "objetivos": [
+        3
+    ],
+    "equipamento": true,
+    "cadencia":"4 sets de 10",
+    "image":"https://treinomestre.com.br/wp-content/uploads/2017/08/musculos-trabalhados-flexao-de-bra%C3%A7o-.jpg"
+}, {
+    "id": 10,
+    "name": "Stiff Unilateral",
+    "locais": [
+        "academia",
+        "casa"
+    ],
+    "objetivos": [
+        3
+    ],
+    "equipamento": true,
+    "image":"https://i.pinimg.com/originals/96/cb/9a/96cb9ab25eed9e88bf7b89f48b1d91ba.jpg",
+    "cadencia":"3 sets de 10 x Cada lado"
+}, {
+    "id": 11,
+    "name": "Elevação Unilateral De Quadril Com Abdominal",
+    "locais": [
+        "academia",
+        "casa"
+    ],
+    "objetivos": [
+        3
+    ],
+    "equipamento": true,
+    "image":"https://i.pinimg.com/originals/66/2a/fd/662afd9b3479e133bd26111ed02d1b09.jpg",
+    "cadencia":"3 sets de 10 x Cada lado"
+}, {
+    "id": 12,
+    "name": "Pular Corda",
+    "locais": [
+        "academia",
+        "casa"
+    ],
+    "objetivos": [
+        1
+    ],
+    "equipamento": true,
+    "image":"https://treinomestre.com.br/wp-content/uploads/2014/07/pular-corda-emagrece.jpg",
+    "cadencia":"Intensidade máxima por 60 segundos, descansar 20 segundos, repetir até 20 minutos"
+}, {
+    "id": 13,
+    "name": "Mountain Climber",
+    "locais": [
+        "academia",
+        "casa"
+    ],
+    "objetivos": [
+        1
+    ],
+    "equipamento": true,
+    "image":"https://eunicakes.files.wordpress.com/2014/02/mountain-climbers.jpg?w=604",
+    "cadencia":"3 sets de 20"
+}, {
+    "id": 4,
+    "name": "Polichinelo",
+    "locais": [
+        "casa"
+    ],
+    "objetivos": [
+        1
+    ],
+    "cadencia":"5 sets de 30",
+    "image":"https://revistashape.com.br/wp-content/uploads/2018/01/polichinelo-exerc%C3%ADcios.jpg"
+}, {
+    "id": 1,
+    "name": "Esteira",
+    "locais": [
+        "academia"
+    ],
+    "objetivos": [
+        1,2
+    ],
+    "cadencia":"30 min",
+    "image":"http://www.personalathletic.com.br/blog/wp-content/uploads/2013/08/IMG_3021-.jpg"
+}, {
+    "id": 6,
+    "name": "Abdominais Infra",
+    "locais": [
+        "casa",
+        "academia"
+    ],
+    "objetivos": [
+        1,2,3
+    ],
+    "cadencia":"3 sets de 15",
+    "image":"https://www.resultadototal.org/x/cdn/?https://storage.googleapis.com/wzukusers/user-25978651/images/5894f421a7f2eP9erXVn/treino-monstro-abdominal-gratis_d400.jpg"
+},{
+    "id": 5,
+    "name": "Abdominais Supra",
+    "locais": [
+        "casa",
+        "academia"
+    ],
+    "objetivos": [
+        1,2,3
+    ],
+    "cadencia":"3 sets de 15",
+    "image":"https://revistashape.com.br/wp-content/uploads/2017/08/abdominal-supra-img.jpg"
+}]

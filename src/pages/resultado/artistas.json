@@ -1,0 +1,49 @@
+[{
+    "id": 1,
+    "name": "Katy Perry",
+    "playlist": 3,
+    "image":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/katy-perry-witness-cover-1497018481.png"
+}, {
+    "id": 2,
+    "name": "Lady Gaga",
+    "playlist": 3,
+    "image":"https://upload.wikimedia.org/wikipedia/pt/thumb/1/1a/LG_The_Fame.jpg/220px-LG_The_Fame.jpg"
+}, {
+    "id": 3,
+    "name": "Ariana Grande",
+    "playlist": 3,
+    "image":"https://static.fnac-static.com/multimedia/Images/PT/NR/24/fc/0a/719908/1540-1/tsp20161107124214/Yours-Truly.jpg"
+},{
+    "id": 4,
+    "name": "Metallica",
+    "playlist": 1,
+    "image":"https://images-na.ssl-images-amazon.com/images/I/51opoXRMkAL._SX355_.jpg"
+},
+{
+    "id": 5,
+    "name": "Slipknot",
+    "playlist": 1,
+    "image":"https://upload.wikimedia.org/wikipedia/pt/thumb/5/51/Slipknotdebutcapa.jpg/220px-Slipknotdebutcapa.jpg"
+},{
+    "id": 6,
+    "name": "Disturbed",
+    "playlist": 1,
+    "image":"https://upload.wikimedia.org/wikipedia/pt/thumb/c/c0/Capa_de_Immortalized.jpg/220px-Capa_de_Immortalized.jpg"
+},{
+    "id": 4,
+    "name": "Dennis DJ",
+    "playlist": 2,
+    "image":"https://direct.rhapsody.com/imageserver/images/Alb.249039360/500x500.jpg"
+},
+{
+    "id": 5,
+    "name": "MC Livinho",
+    "playlist": 2,
+    "image":"https://images.suamusica.com.br/7ekcw_zWLoPVcYpSE2nHUHYrP4g=/240x240/426350/1936661/cd_cover.jpg"
+},
+{
+    "id": 6,
+    "name": "Ludmilla",
+    "playlist": 2,
+    "image":"https://s.glbimg.com/jo/g1/f/original/blog/ec8cb05e-64aa-41b2-9e50-0b0ba03b9220_ludmillaadanadasouecapadodisco.jpg"
+}]

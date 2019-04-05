@@ -1,0 +1,31 @@
+[{
+    "id": 1,
+    "name": "Corda de Pular Enforce Fitness Speed Rope Usinada SR001 - 3m",
+    "image": "https://imgcentauro-a.akamaihd.net/900x900/M025TH02/corda-de-pular-enforce-fitness-speed-rope-usinada-sr001-3m-img.jpg",
+    "link":"https://www.centauro.com.br/speed-rope-usinada-corda-de-pular-preta-sr001---enforce-fitness-m025th-mktp.html?cor=02",
+    "loja":"Centauro",
+    "preco":"R$ 219,89",
+    "objetivos": [
+        1,2,3
+    ]
+}, {
+    "id": 2,
+    "name": "Tapete de Yoga com Alça Oxer Mat - 191 x 61 x 0,4 cm",
+    "image": "https://imgcentauro-a.akamaihd.net/900x900/76898103/tapete-de-yoga-com-alca-oxer-mat-191-x-61-x-0-4-cm-img.jpg",
+    "link":"https://www.centauro.com.br/colchonete-de-yoga-oxer-768981.html?cupomId=ca841634-6693-44d0-bda0-ed1532853796&cor=03&gclid=EAIaIQobChMI_ezT3Ju44QIVEgmRCh0QqQu5EAYYASABEgJVPfD_BwE",
+    "loja":"Centauro",
+    "preco":"R$ 47,59",
+    "objetivos": [
+        1,2,3
+    ]
+}, {
+    "id": 3,
+    "name": "Faixa Elástica UP Lift Tipo Thera Band Tensão Média",
+    "image": "https://static.netshoes.com.br/produtos/faixa-elastica-up-lift-tipo-thera-band-tensao-media/60/X16-0056-060/X16-0056-060_zoom2.jpg",
+    "link":"https://www.netshoes.com.br/faixa-elastica-up-lift-tipo-thera-band-tensao-media-verde-X16-0056-060",
+    "loja":"Netshoes",
+    "preco":"R$ 27,90",
+    "objetivos": [
+        1,2,3
+    ]
+}]

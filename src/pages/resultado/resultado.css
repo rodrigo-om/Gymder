@@ -1,9 +1,55 @@
-.equipamentos {
+.container-resultado {
+    width: 60vw;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
 }
 
 .equipamento {
+    margin-top: 20px;
+    width: 270px;
+}
+
+.image-equipamento {
     text-align: left;
-    margin: 0px 25px;
+    margin: 10px auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.inline-block {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.exercicio {
+    padding: 25px 50px;
+    margin-top: 20px;
+    width: 270px;
+}
+
+.titulo-pagina {
+    font-size: 38px;
+    font-family: 'Raleway', sans-serif;
+    color: #ff3860
+}
+
+.titulo-resultado {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: #282828
+}
+
+.image-academia {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);  
+}
+
+.titulo-academia {
+    padding-top: 20px; 
 }

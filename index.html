@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,31 +8,95 @@
   <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
   <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
   <script type="text/javascript" src='https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js'></script>
   <script src="app.js"></script>
   <script src="src/config/routes.js"></script>
   <script src="src/pages/local/local.controller.js"></script>
+  <script src="src/pages/common/login.controller.js"></script>
   <script src="src/pages/spotify/spotify.controller.js"></script>
   <script src="src/pages/objetivo/objetivo.controller.js"></script>
   <script src="src/pages/academia/academia.controller.js"></script>
   <script src="src/pages/resultado/resultado.controller.js"></script>
   <script src="src/pages/equipamentos/equipamentos.controller.js"></script>
 </head>
-<body style="display: flex;min-height: 100vh;flex-direction: column;" ng-app="myApp" >
+
+<body style="display: flex;min-height: 100vh;flex-direction: column;" ng-app="myApp">
+  <div ng-controller="LoginController as loginCtrl">
   <section class="nav-section">
     <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand" style="flex-grow: 1; justify-content: center;">
+      <div class="navbar-brand" style="flex-grow: 1; ">
         <a class="navbar-item" href="./index.html">
           <img src="./img/gymder-horizontal-transparent.png" width="150" height="50">
         </a>
+      </div>
+      <div class="navbar-menu" id="navbarExampleTransparentExample">
+        <div class="navbar-end field is-pulled-right">
+          <div class="navbar-item">
+            <div class="control">
+              <button ng-show="loginCtrl.isLogado==false" class="button is-danger is-outlined is-inverted" ng-click="console.log('registrou');login=true">Entrar</button>
+              <button ng-show="loginCtrl.isLogado==true" class="button is-danger is-outlined is-inverted" ng-click="console.log('registrou');logout=true">Bem vindo de volta {{loginCtrl.usuarioLogado}}!</button>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   </section>
   <section class="section" style="height: 80vh">
     <div ui-view class="container"></div>
   </section>
+  <div class="modal" ng-class="{ 'is-active': login}">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Entrar</p>
+        <button class="delete" aria-label="close" ng-click="login=false"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="field">
+          <div class="control has-icons-left has-icons-right">
+            <input class="input" type="text" placeholder="Email" ng-model="auth.email">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <p class="control has-icons-left">
+            <input class="input" type="password" placeholder="Senha" ng-model="auth.senha">
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-danger" ng-click="loginCtrl.login(auth);login=false">Entrar</button>
+        <button class="button" ng-click="login=false">Cancelar</button>
+      </footer>
+    </div>
+  </div>
+  <div class="modal" ng-class="{ 'is-active': logout}" >
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Logout</p>
+          <button class="delete" aria-label="close" ng-click="login=false"></button>
+        </header>
+        <section class="modal-card-body">
+          <p class="title is-5">Quer fazer logout?</p>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-danger" ng-click="loginCtrl.logout();logout=false">Sim</button>
+          <button class="button" ng-click="logout=false">Cancelar</button>
+        </footer>
+      </div>
+    </div>
+    </div>
 </body>
 </html>

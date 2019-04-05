@@ -2,34 +2,136 @@
 <div class="columns" ng-controller="ResultadoController as resultCtrl">
   <div class="column centered-select">
     <div class="field is-centered has-text-centered">
-      <label class="label">Seus resultados</label>
-      Primeiramente, você vai precisar desses equipamentos para fazer os exercicios:
-      <div ng-if="resultCtrl.local=='casa' && resultCtrl.equipamentos" class="equipamentos">
-        <div ng-repeat="equipamento in resultCtrl.equipamentos" class="equipamentos">
-          <figure class="image equipamento">
-            <img ng-src="{{equipamento.image}}">
-            <div>
-              <figcaption ><a href="{{equipamento.link}}">{{equipamento.name}}</a></figcaption>
-              <p>R$1000,00</p>
+      <label class="label titulo-pagina">SEUS RESULTADOS</label>
+      <div ng-if="resultCtrl.local=='casa' && resultCtrl.equipamentos">
+        <label class="label titulo-resultado">Equipamentos</label>
+        <p>Primeiramente, você vai precisar desses equipamentos para fazer os exercicios:</p>
+        <div class="container-resultado">
+          <div ng-repeat="equipamento in resultCtrl.equipamentos" class="card inline-block equipamento">
+            <div class="card-image">
+              <figure class="image is-128x128 image-equipamento">
+                <img ng-src="{{equipamento.image}}">
+              </figure>
             </div>
-          </figure>
+            <div class="card-content">
+              <div class="content">
+                <p><a href="{{equipamento.link}}" target="_blank">{{equipamento.name}}</a></p>
+                <p>{{equipamento.preco}}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div ng-if="resultCtrl.local=='academia'">
-        <div ng-if="resultCtrl.zonaAcademia==false">Você já tem sua academia! Que ótimo!</div>
-        <div ng-repeat="academia in resultCtrl.academias">
-          <h1>{{academia.name}}</h1>
+        <label class="label titulo-resultado">Academia</label>
+        <div ng-if="resultCtrl.zonaAcademia==false">
+          Você já tem sua academia! Que ótimo!
+        </div>
+        <div ng-if="resultCtrl.zonaAcademia!=false">
+          Então você quer uma academia na <strong>{{resultCtrl.zonaAcademia.label}}</strong>, certo? Temos a sugestão
+          perfeita pra isso!
+          <div class="container-resultado">
+            <div ng-repeat="academia in resultCtrl.academias" class="inline-block">
+              <figure class="image">
+                <img ng-src="{{academia.image}}" class="is-rounded image-academia">
+                <div>
+                  <figcaption class="title is-4 titulo-academia"><a href="{{academia.link}}">{{academia.name}}</a></figcaption>
+                </div>
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <div ng-repeat="exercicio in resultCtrl.exercicios">
-          <h1>{{exercicio.name}}</h1>
+      <label class="label titulo-resultado">Exercícios</label>
+      <div class="container-resultado">
+        <p>Agora é hora de fazer acontecer! Esses são os exercícios que você vai fazer pra iniciar sua vida fitness com
+          estilo:</p>
+        <div ng-repeat="exercicio in resultCtrl.exercicios" class="card inline-block exercicio">
+          <header class="card-header">
+            <p class="card-header-title is-centered">
+              {{exercicio.name}}
+            </p>
+          </header>
+          <div class="card-image">
+            <figure class="image is-128x128">
+              <img src="{{exercicio.image}}">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle is-6">{{exercicio.cadencia}}</p>
+            </div>
+          </div>
         </div>
       </div>
       <div ng-if="resultCtrl.playlist">
-        <div ng-repeat="artista in resultCtrl.artistas">
-          <h1>{{artista.name}}</h1>
+        <label class="label titulo-resultado">Playlist</label>
+        <p>A playlist que você escolheu foi a playlist <strong>{{resultCtrl.nomePlaylist}}</strong>, essa é uma prévia
+          do que você pode esperar na playlist:</p>
+        <div class="container-resultado">
+          <div ng-repeat="artista in resultCtrl.artistas" class="inline-block column">
+            <figure class="image">
+              <img ng-src="{{artista.image}}">
+              <div>
+                <figcaption class="subtitle is-5">{{artista.name}}</figcaption>
+              </div>
+            </figure>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="field is-grouped has-addons-centered has-addons">
+      <div class="control">
+        <button class="button is-danger" ng-click="cadastrar=true">Salvar resultado</button>
+      </div>
+    </div>
+    <div class="field is-grouped has-addons-centered has-addons">
+      <div class="control">
+        <button class="button is-light" ui-sref="spotify">Voltar</button>
+        <button class="button is-light" ui-sref="home">Reiniciar</button>
+      </div>
+    </div>
+    <div class="modal" ng-class="{ 'is-active': cadastrar}">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Cadastrar</p>
+          <button class="delete" aria-label="close" ng-click="cadastrar=false;resultCtrl.cadastroSucesso=false"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="field">
+            <div class="control has-icons-left">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+              <input class="input" type="text" placeholder="Nome" ng-model="user.nome">
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="text" placeholder="Email" ng-model="user.email">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" type="password" placeholder="Senha" ng-model="user.senha">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+
+          <p ng-show="resultCtrl.cadastroSucesso" class="help is-success is-2">Cadastro feito com sucesso!</p>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-danger" ng-click="resultCtrl.cadastrar(user)">Cadastrar</button>
+          <button class="button" ng-click="cadastrar=false;resultCtrl.cadastroSucesso=false">Fechar</button>
+        </footer>
       </div>
     </div>
   </div>
